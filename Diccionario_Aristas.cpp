@@ -23,7 +23,7 @@ public:
   int hash(const string& key1,const string& key2 ) const{
       int hashVal = 0;
       for(char ch : key1) hashVal += ch;
-      for(char ch : key2) hashVal += ch;
+      for(char ch : key2) hashVal += ch*ch*1000;
       return hashVal % size;
   }
 
